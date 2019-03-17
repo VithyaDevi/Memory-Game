@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves"></span> Moves
+
+            <div class="timer"></div>
+
+            <span class="successText"></span>
+
+            <div class="restart">
+                <i class="fa fa-repeat"> Restart</i>
+            </div>
+        </section>
+
+        <ul class="deck">
+        </ul>
+    
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations !!!!!!</h2>
+                <a href="#" class="close">X</a>
+                <div class="content1">
+                    <h4>You Win the Game :)</h4>
+                </div>
+                <div class="content2">
+                    <p>Total Moves :  <span id = "finalMove"></span></p>
+                    <p>Total Time :  <span id = "totalTime"></span></p>
+                    <p>Stars :  <span id = "starRating"></span></p>
+                </div>
+                <button id="playAgain" class="button" onclick="playAgain()">Play Again</button>
+            </div>
+        </div> 
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
