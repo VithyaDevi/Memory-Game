@@ -23,6 +23,6 @@ The game randomly shuffles the cards. The player wins once he/she successfully m
 * The score panel also contains a timer and a restart button.
 * Once the user successfully finishes the game, a popup will display congratulating the player displaying the time, moves and star rating.
 
-#Dependencies
-* Bootstrap used for CSS styling.
+# Dependencies
+* Bootstrap used for game styling.
 * Google fonts is used for content.
