@@ -2,8 +2,11 @@
  * Create a list that holds all of your cards
  * two same icons (original+copy)
  */
-const iconLists = ["fa fa-diamond","fa fa-diamond","fa fa-paper-plane-o","fa fa-paper-plane-o","fa fa-anchor","fa fa-anchor","fa fa-bolt","fa fa-bolt",
-"fa fa-cube","fa fa-cube","fa fa-leaf","fa fa-leaf","fa fa-bicycle","fa fa-bicycle","fa fa-bomb","fa fa-bomb"];
+const iconLists = ["fa fa-diamond","fa fa-diamond",
+"fa fa-paper-plane-o","fa fa-paper-plane-o",
+"fa fa-anchor","fa fa-anchor","fa fa-bolt","fa fa-bolt",
+"fa fa-cube","fa fa-cube","fa fa-leaf","fa fa-leaf",
+"fa fa-bicycle","fa fa-bicycle","fa fa-bomb","fa fa-bomb"];
 
 
 /*
@@ -72,13 +75,13 @@ function compare(currentCard, previousCard){
     //compare two cards
     if(currentCard.innerHTML === previousCard.innerHTML){
         matched(currentCard, previousCard);
-        
     }
     else{
         unMatched(currentCard, previousCard);
     }
     // add the moves function to count the moves
     countMoves();
+    //success.innerHTML = "";
 }
 
 
@@ -91,12 +94,10 @@ function matched(currentCard, previousCard){
     currentCard.classList.add("match");
     previousCard.classList.add("match");
     matchedCards.push(currentCard,previousCard);
-    success.innerHTML = "   Success !!";
-    //success.innerHTML = "";
+    success.innerHTML = "Success !!";
     //if 2 cards match reset openedCards array so that the next pair will match
     openedCards = [];
     //check if game is over
-    //matchedCards = [];
     congratulations();
 }
 
@@ -106,8 +107,6 @@ function matched(currentCard, previousCard){
 */
 function unMatched(currentCard, previousCard){
     //if doesn't match wait for 1000ms and flip the card back
-    currentCard.classList.add("unmatch");
-    previousCard.classList.add("unmatch");
     setTimeout(function(){
         currentCard.classList.remove("open","show","match","disable");
         previousCard.classList.remove("open","show","match","disable");

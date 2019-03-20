@@ -66,7 +66,7 @@ body {
 }
 
 .deck .card.open {
-    transform: rotateY(0);
+    /* transform: rotateY(0); */
     background: #02b3e4;
     cursor: default;
     animation-name: cardsFlip;
@@ -79,14 +79,10 @@ body {
     font-size: 33px;
 }
 
-.deck .card.disable{
-    pointer-events: none;
-    opacity: 0.9;
-}
 
 .deck .card.match {
     cursor: default;
-    background: #945cc9;
+    background: #965fca;
     font-size: 33px;
     animation-name: cardsMatch;
     animation-duration: 0.75s;
@@ -94,13 +90,21 @@ body {
     backface-visibility: visible !important;
 }
 
+
 .deck .card.unmatch{
     animation-name: cardsUnmatch;
     animation-duration: 0.75s;
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
-    /* background: #e2043b; */
+    background: #d35977;
 }
+
+
+.deck .card.disable{
+    pointer-events: none;
+    opacity: 0.9;
+}
+
 
 
 /*
@@ -140,7 +144,6 @@ body {
     display: inline-block;
     margin: 0 1rem;
 }
-
 
 
 /*
@@ -238,6 +241,36 @@ body {
 
 
 /*
+* Animations for flip
+*/
+@keyframes cardsFlip {
+    from{
+        transform: perspective(400px) rotate3d(0, 1, 0, 145deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to{
+        transform: perspective(400px);
+    }
+}
+
+
+/*
 * Animations for card match
 */
 @keyframes cardsMatch{
@@ -288,33 +321,3 @@ body {
         transform: scale3d(1, 1, 1);
     }
 } 
-
-
-/*
-* Animations for flip
-*/
-@keyframes cardsFlip {
-    from{
-        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    }
-
-    to{
-        transform: perspective(400px);
-    }
-}
