@@ -127,6 +127,7 @@ restartButton.addEventListener("click",function(){
     startGame();
     //reset any related variables
     matchedCards = [];
+    openedCards = []; //reset bug fixed
     //reset the moves when restarting the game
     moves = 0;
     movesContainer.innerHTML = moves;
