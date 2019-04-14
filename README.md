@@ -1,11 +1,10 @@
 # MEMORY GAME
 
-# How To Play this game 
-
 This is a card game to test users memory. There will be a deck of cards with different icons.
 The game randomly shuffles the cards. The player wins once he/she successfully matches all the cards.
 
-<img src="screenshots/game.png" height="400" alt="Screenshot"/>
+# How To Play this game 
+* Click this link : https://vithyadevi.github.io/Memory-Game/
 
 # Instructions
 * Click on a card. Keep revealing cards by working your memory to remember each opened card.
